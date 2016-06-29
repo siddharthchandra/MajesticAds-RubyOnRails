@@ -1,0 +1,4 @@
+rishabh:
+  name: Rishabh Khatri
+  email: rishabh@khatri.com
+  password_digest: <%= User.digest('password') %>

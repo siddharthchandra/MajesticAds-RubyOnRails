@@ -77,32 +77,40 @@ p {
   text-decoration: none;
 }
 
-.nav1{
-	background-color: #333 !important;
+.navbar{
+	background-color: #111 !important;
 	padding: 0;
     z-index: 1;
-}
-
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    height: 100% !important;
+    box-shadow: 0 0 10px 5px #ddd;
 }
 
 .nav a{
-	color: #fff;
+	color: #fff !important;
     font-family: "roboto", "sans-serif";
-    font-size: 23px;
+    font-size: 17px;
     text-align: center;
     padding: 14px 16px;
-    transition: 0.3s;
+    transition: 0.4s !important;
     text-decoration: none !important;
     &:hover{
-    background-color: #fff !important;
-    color: #333 !important;
-    transition: 0.3s;
+    background-color: #777 !important;
+    color: #fff !important;
+    transition: 0.4s !important;
+    }
+}
+
+.dropdown-menu a{
+	color: #000 !important;
+    font-family: "roboto", "sans-serif";
+    font-size: 17px;
+    text-align: center;
+    padding: 14px 16px;
+    transition: 0.4s !important;
+    text-decoration: none !important;
+    &:hover{
+    background-color: #bbb !important;
+    color: #111 !important;
+    transition: 0.4s !important;
     }
 }
 
