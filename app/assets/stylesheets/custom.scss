@@ -81,7 +81,7 @@ p {
 	background-color: #111 !important;
 	padding: 0;
     z-index: 1;
-    box-shadow: 0 0 10px 5px #ddd;
+    box-shadow: 0 0 5px 5px #ddd;
 }
 
 .nav a{
@@ -93,10 +93,15 @@ p {
     transition: 0.4s !important;
     text-decoration: none !important;
     &:hover{
-    background-color: #777 !important;
-    color: #fff !important;
+    background-color: #fff !important;
+    color: #111 !important;
     transition: 0.4s !important;
     }
+}
+
+.li_style{
+	z-index: 1;
+	box-shadow: 0 0 10px 5px #fff;
 }
 
 .dropdown-menu a{
@@ -108,8 +113,8 @@ p {
     transition: 0.4s !important;
     text-decoration: none !important;
     &:hover{
-    background-color: #bbb !important;
-    color: #111 !important;
+    background-color: #111 !important;
+    color: #fff !important;
     transition: 0.4s !important;
     }
 }
@@ -219,4 +224,18 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
