@@ -7,21 +7,26 @@ User.create!(name:  "Rishabh Khatri",
              activated: true,
              activated_at: Time.zone.now)
 
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
+User.create!(name:  "Ashutosh Kumar",
+             email: "ashutosh15018@iiitd.ac.in",
+             password:              "ashutosh@iiitd",
+             password_confirmation: "ashutosh@iiitd",
+             admin: true,
              activated: true,
              activated_at: Time.zone.now)
 
-98.times do |n|
-  name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password,
-               activated: true,
-               activated_at: Time.zone.now)
-end
+User.create!(name:  "Prasoon Jain",
+             email: "prasoon15157@iiitd.ac.in",
+             password:              "prasoon@iiitd",
+             password_confirmation: "prasoon@iiitd",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+User.create!(name:  "Gaurav Sachdeva",
+             email: "gaurav15031@iiitd.ac.in",
+             password:              "gaurav@iiitd",
+             password_confirmation: "gaurav@iiitd",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
