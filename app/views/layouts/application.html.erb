@@ -15,6 +15,23 @@
     <script src="https://use.fontawesome.com/220eb7c274.js"></script>
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Smooth Scroll -->
+    <script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 600, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+    </script>
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track': 'reload' %>

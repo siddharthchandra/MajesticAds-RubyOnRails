@@ -1,29 +1,38 @@
-<header class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <%= link_to "Majestic Ads", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Help",   help_path %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li>
-          <li id="dropdown" class="dropdown">
-            <a id="dropdown_btn" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= gravatar_for current_user, size: 30 %> <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to '<i class="fa fa-user"></i> Profile'.html_safe, current_user %></li>
-              <li><%= link_to '<i class="fa fa-cog"></i> Settings'.html_safe, edit_user_path(current_user) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to '<i class="fa fa-sign-out"></i> Log out'.html_safe, logout_path, method: "delete" %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li id="log_in"><a href="/login"><i id="login" class="fa fa-sign-in"></i> Log in</a></li>
-        <% end %>
-      </ul>
-    </nav>
-  </div>
+<header>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button style="color: #fff;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span style="background-color: #fff;" class="icon-bar"></span>
+          <span style="background-color: #fff;" class="icon-bar"></span>
+          <span style="background-color: #fff;" class="icon-bar"></span> 
+        </button>
+        <%= link_to "Majestic Ads", root_path, id: "logo" %>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home",   root_path %></li>
+          <li><%= link_to "Help",   help_path %></li>
+          <% if logged_in? %>
+            <li><%= link_to "Users", users_path %></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">
+                <%= gravatar_for current_user, size: 30 %> <b class="caret"></b>
+              </a>
+              <ul class="dropdown-content">
+                <li><%= link_to '<i class="fa fa-user"></i> Profile'.html_safe, current_user %></li>
+                <li><%= link_to '<i class="fa fa-cog"></i> Settings'.html_safe, edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to '<i class="fa fa-sign-out"></i> Log out'.html_safe, logout_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li id="log_in"><a href="/login"><i id="login" class="fa fa-sign-in"></i> Log in</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>

@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  font-family: "roboto", "sans-serif";
+  font-family: "roboto", "sans-serif" !important;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -45,7 +45,7 @@ h1 {
 
 h2 {
   font-size: 1.2em;
-  font-family: "roboto", "sans-serif";
+  font-family: "roboto", "sans-serif" !important;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -55,7 +55,7 @@ h2 {
 
 p {
   font-size: 1.1em;
-  font-family: "roboto", "sans-serif";
+  font-family: "roboto", "sans-serif" !important;
   line-height: 1.7em;
 }
 
@@ -78,45 +78,82 @@ p {
 }
 
 .navbar{
-	background-color: #111 !important;
-	padding: 0;
-    z-index: 1;
-    box-shadow: 0 0 5px 5px #ddd;
+	background-color: #06f !important;
+  padding: 0;
+  z-index: 1;
+  box-shadow: 0 0 5px 5px #ddd;
 }
 
 .nav a{
 	color: #fff !important;
-    font-family: "roboto", "sans-serif";
-    font-size: 17px;
-    text-align: center;
-    padding: 14px 16px;
-    transition: 0.4s !important;
-    text-decoration: none !important;
-    &:hover{
-    background-color: #fff !important;
-    color: #111 !important;
-    transition: 0.4s !important;
-    }
-}
-
-.li_style{
-	z-index: 1;
-	box-shadow: 0 0 10px 5px #fff;
+  font-family: "roboto", "sans-serif" !important;
+  font-size: 17px;
+  text-align: center;
+  padding: 14px 16px;
+  transition: 0.4s !important;
+  text-decoration: none !important;
+  &:hover{
+  background-color: #fff !important;
+  color: #06f !important;
+  transition: 0.4s !important;
+  }
 }
 
 .dropdown-menu a{
 	color: #000 !important;
-    font-family: "roboto", "sans-serif";
-    font-size: 17px;
-    text-align: center;
-    padding: 14px 16px;
-    transition: 0.4s !important;
-    text-decoration: none !important;
-    &:hover{
-    background-color: #111 !important;
-    color: #fff !important;
-    transition: 0.4s !important;
-    }
+  font-family: "roboto", "sans-serif" !important;
+  font-size: 17px;
+  text-align: center;
+  padding: 14px 16px;
+  transition: 0.4s !important;
+  text-decoration: none !important;
+  &:hover{
+  background-color: #06f !important;
+  color: #fff !important;
+  transition: 0.4s !important;
+  }
+}
+
+.dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.dropdown a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* footer */
@@ -180,7 +217,7 @@ aside {
     }
     h1 {
       font-size: 25px;
-      font-family: "roboto", "sans-serif";
+      font-family: "roboto", "sans-serif" !important;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
